@@ -48,27 +48,32 @@
 
 <body class="bg-white text-gray-800 font-sans">
 
-    <!-- SCROLL-ACTIVATED OFFER -->
-    <section id="offer" class="hidden text-center bg-red-400 py-2 px-4">
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <h2 id="offer-headline" class="text-2xl font-bold text-white whitespace-nowrap"></h2>
-            <div id="timer" class="flex pt-6 gap-2 text-2xl font-bold text-white">
-                <div class="flex flex-col items-center">
-                    <span id="minutes" class="bg-red-600 px-3 py-1 rounded text-white text-2xl font-bold">00</span>
-                    <span class="text-xs mt-1 text-white opacity-80">MIN</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <span id="seconds" class="bg-red-600 px-3 py-1 rounded text-white text-2xl font-bold">00</span>
-                    <span class="text-xs mt-1 text-white opacity-80">SEC</span>
-                </div>
-            </div>
-            <span class="mr-2 text-xl animate-pulse">⚠️</span>
-        </div>
-    </section>
+<!-- SCROLL-ACTIVATED OFFER -->
+<section id="offer" class="hidden sticky top-0 z-50 text-center bg-red-400 py-2 px-4">
+    
+    <div class="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-8 text-white text-center">
+      <span class="text-xl -mr-5 animate-pulse hidden sm:inline">⚠️</span>
+    
+    <!-- TÍTULO -->
+    <h2 id="offer-headline" class="text-lg sm:text-2xl font-bold whitespace-normal sm:whitespace-nowrap text-center sm:text-right"></h2>
+
+    <!-- TIMER -->
+    <div id="timer" class="flex gap-1 sm:gap-2 text-xl sm:text-2xl font-bold justify-center sm:justify-start pt-1 sm:pt-0">
+      <div class="flex flex-col items-center">
+        <span id="minutes" class="bg-red-600 px-2 sm:px-3 py-1 rounded text-white">00</span>
+                <span class="text-[8px] text-xs mt-1 text-white opacity-80">MIN</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span id="seconds" class="bg-red-600 px-2 sm:px-3 py-1 rounded text-white">00</span>
+               <span class="text-[8px] text-xs mt-1 text-white opacity-80">SEC</span>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- HERO SECTION -->
     <section class="text-center py-12 px-4 max-w-3xl mx-auto">
-        <h1 id="headline" class="text-4xl font-bold mb-4"></h1>
+        <h1 id="headline" class="text-2xl sm:text-4xl font-bold mb-4"></h1>
         <!-- VSL VIDEO -->
         <div class="mb-6">
             <iframe class="w-full h-64 md:h-96" src="https://www.youtube.com/embed/1DSIia6bayU?rel=0&modestbranding=1&showinfo=0&controls=1" title="Health Product Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -98,10 +103,12 @@
     <section class="text-center py-12 px-4 max-w-6xl mx-auto space-y-8">
         <div class="grid md:grid-cols-3 gap-6">
 
-            <!-- 1 Bottle -->
+            <!-- 1 Bottle --> 
             <div class="bg-white border hover:shadow-lg shadow rounded-2xl p-6 pb-4 flex flex-col justify-between">
-                <h3 class="text-lg font-semibold -mb-9">1 BOTTLE Elytron InsuCare</h3>
+                <div>
+                <h3 class="text-lg font-semibold ">1 BOTTLE Elytron InsuCare</h3>
                 <img src="assets/img/products/elytron-1bottle.png" alt="1 Bottle Elytron InsuCare" class="w-full h-40 object-contain mx-auto -mb-5">
+                </div>
                 <div class="text-3xl text-green-600 font-bold -mb-10">$89.90 USD <span class="text-gray-500 text-xs"> per bottle</span></div>
                 <div>
                 <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full transition" title="Buy now 1 bottle Elytron InsuCare"><a href="https://next-goal-health.mycartpanda.com/ckt/on1qW9?cid=62586182800&amp;utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=">BUY NOW</a></button>
@@ -624,14 +631,14 @@
     </footer>
 
     <!-- BONUS POPUP -->
-    <div id="bonus-popup" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-        <div class="bg-white max-w-2xl w-full rounded-xl shadow-2xl p-8 relative flex flex-col items-center gap-6 animate-fadeIn">
+    <div id="bonus-popup" class="fixed inset-0 bg-black/50 flex items-center justify-center border p-4 z-50">
+        <div class="bg-white max-w-2xl w-full border rounded-xl shadow-2xl p-5 relative flex flex-col items-center gap-6 animate-fadeIn">
 
             <button id="close-bonus-popup" class="absolute top-3 right-3 text-gray-500 hover:text-black text-3xl leading-none">×</button>
 
             <div class="text-center w-full">
                 <h2 class="text-2xl md:text-3xl font-bold text-green-600 mb-3">Your Free Gift Is Almost Ready!</h2>
-                <p class="text-[15px] text-gray-700 max-w-xl mx-auto">
+                <p class="text-gray-700 text-xs max-w-xl mx-auto">
                     You watched the full video — now it’s time to claim your exclusive bonus.<br><br>
                     As promised, you’re getting FREE access to our <strong>Diabetes-Friendly Recipe Book</strong> — packed with delicious, blood sugar-friendly meals you can enjoy without guilt.
                 </p>
@@ -659,7 +666,7 @@
                     <input type="text" name="firstName" placeholder="First Name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" required="">
                     <input type="email" name="email" placeholder="Email Address" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" required="">
                     <input type="tel" name="phone" placeholder="Phone Number" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
-                    <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full text-lg w-full">
+                    <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-6 rounded-full text-md w-full">
                         GET MY FREE COOKBOOK NOW
                     </button>
                 </form>
