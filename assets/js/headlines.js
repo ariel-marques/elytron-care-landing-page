@@ -1,0 +1,22 @@
+const headlines = [
+  "The Natural Way to Balance Your Blood Sugar — Without Giving Up the Foods You Love",
+  "Reverse Type 2 Diabetes From the Inside Out — No Pills, No Diets, No Gym",
+  "Thousands Are Reclaiming Their Health With This Gut-Based Solution",
+  "What If the Real Cause of Diabetes Isn’t Sugar… But Bacteria in Your Gut?",
+  "Finally: A Natural, Drug-Free Approach to Blood Sugar Control That Actually Works",
+  "What Harvard & UCSF Scientists Found Inside the Diabetic Gut Will Shock You",
+  "New Discovery Links Insulin Resistance to Gut Bacteria — Not Sugar",
+  "This Japanese Researcher Was Fired for Revealing the Truth About Diabetes — Here’s What He Found",
+  "Doctors Are Quietly Recommending This Natural Formula That Targets the Gut",
+  "Clinically Proven to Eliminate the Root Cause of Type 2 Diabetes",
+  "Over 15,000 People Have Already Used This Discovery to Reclaim Their Health",
+  "They Said Type 2 Diabetes Was Forever — They Were Wrong",
+  "You’ve Tried Everything. This Works Because It’s Different.",
+  "This Video Changed the Lives of Thousands Living With Type 2 Diabetes",
+  "Real People. Real Results. Real Freedom From Diabetes.",
+  "This Information Could Be Taken Down at Any Moment — Watch Before It’s Gone",
+  "The Natural Diabetes Discovery Big Pharma Doesn’t Want You to See",
+  "They Tried to Silence Him — Now He’s Sharing His Secret With the World",
+  "Your Window to Reverse Type 2 Diabetes Naturally Is Closing Fast",
+  "Don’t Let This Life-Changing Discovery Disappear Before You See It"
+];
