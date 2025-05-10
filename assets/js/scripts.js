@@ -1,14 +1,3 @@
-// FAKE COUNTDOWN (MINUTES:SECONDS)
-let countdown = 9 * 60 + 59; // 9 minutes and 59 seconds
-const timerEl = document.getElementById('timer');
-function updateTimer() {
-  const min = String(Math.floor(countdown / 60)).padStart(2, '0');
-  const sec = String(countdown % 60).padStart(2, '0');
-  timerEl.textContent = `${min}:${sec}`;
-  if (countdown > 0) countdown--;
-}
-setInterval(updateTimer, 1000);
-updateTimer();
 
 // FAKE VIEWERS
 let viewers = Math.floor(1553 + Math.random() * 50);
@@ -23,6 +12,26 @@ let stock = 1500;
 const minStock = 18;
 const stockEl = document.getElementById('stock');
 stockEl.textContent = stock;
+
+// FAKE COUNTDOWN (MINUTES:SECONDS)
+let countdown = 9 * 60 + 59; // 9 minutes and 59 seconds
+
+const minutesSpan = document.getElementById('minutes');
+const secondsSpan = document.getElementById('seconds');
+
+function updateTimer() {
+  const min = String(Math.floor(countdown / 60)).padStart(2, '0');
+  const sec = String(countdown % 60).padStart(2, '0');
+
+  minutesSpan.textContent = min;
+  secondsSpan.textContent = sec;
+
+  if (countdown > 0) countdown--;
+}
+
+setInterval(updateTimer, 1000);
+updateTimer();
+
 
 // FAKE COUNTDOWN STOCK
 document.addEventListener('DOMContentLoaded', () => {
