@@ -662,3 +662,18 @@
   width: 120px;
 }
 }
+.strike {
+  position: relative;
+  color: #9ca3af; /* Tailwind's gray-400 */
+  font-weight: 400;
+}
+
+.strike::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid #dc2626; /* Tailwind's red-600 */
+  transform: translateY(-50%);
+}
