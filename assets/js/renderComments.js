@@ -30,9 +30,25 @@ function shuffleArray(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
+// 👇 Gera tempo aleatório em formato realista
+function getRandomTimeAgo() {
+  const rand = Math.random();
+  if (rand < 0.33) {
+    // Minutos (5min a 59min)
+    return `${Math.floor(Math.random() * (59 - 5 + 1)) + 5}m`;
+  } else if (rand < 0.66) {
+    // Horas (1h a 10h)
+    return `${Math.floor(Math.random() * 10) + 1}h`;
+  } else {
+    // Dias (1 a 2 dias)
+    return `${Math.floor(Math.random() * 2) + 1}d`;
+  }
+}
+
 function createCommentElement(commentObj) {
   const likes = getRandomLikes();
   const avatar = getRandomAvatar(commentObj.gender, commentObj.ageGroup);
+  const timeAgo = getRandomTimeAgo();
 
   return `
     <div class="flex gap-2">
@@ -45,7 +61,7 @@ function createCommentElement(commentObj) {
         <div class="flex items-center gap-3 mt-0.5 text-xs">
           <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">Like</button>
           <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">Reply</button>
-          <span class="text-[#65676B]">1h</span>
+          <span class="text-[#65676B]">${timeAgo}</span>
           <div class="flex items-center gap-1">
             <div class="bg-[#0866FF] p-1 rounded-full">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
@@ -61,10 +77,8 @@ function createCommentElement(commentObj) {
   `;
 }
 
-// Embaralhar os comentários
+// Embaralhar e renderizar comentários
 const shuffledComments = shuffleArray(commentsData).slice(0, 40);
-
-// Renderizar todos de uma vez
 shuffledComments.forEach(comment => {
   commentsContainer.insertAdjacentHTML('beforeend', createCommentElement(comment));
 });
