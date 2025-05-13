@@ -870,7 +870,7 @@
     align-items: center;
   }
   .cta-boxes .cta-box {
-    width: 100%;
+    width: 80%;
     max-width: 420px; /* ou ajuste conforme o layout */
     margin-left: auto;
     margin-right: auto;
