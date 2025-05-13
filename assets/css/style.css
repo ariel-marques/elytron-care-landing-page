@@ -662,18 +662,247 @@
   width: 120px;
 }
 }
-.strike {
-  position: relative;
-  color: #9ca3af; /* Tailwind's gray-400 */
-  font-weight: 400;
+
+/* INICIO GLOBAL */ 
+
+
+/* Estilos compactos para cards promocionais */
+
+.cta-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
 }
 
+/* Card base */
+.cta-boxes .cta-box {
+  border: 2px solid #eee;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.14),
+              0 1px 5px rgba(0, 0, 0, 0.12),
+              0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
+  max-width: 320px;
+  flex: 1 1 100%;
+}
+
+/* Hover */
+.cta-boxes .cta-box:hover {
+  border-color: #7ba0c4;
+  background-color: #fffdf1;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.14),
+              0 1px 18px rgba(0, 0, 0, 0.12),
+              0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* Título */
+.cta-boxes .bottle-title {
+  background-color: #065f46;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.cta-boxes .bottle-title h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: Lato, sans-serif;
+}
+
+.cta-boxes .bottle-title p {
+  font-size: 16px;
+  font-style: italic;
+  color: #fff;
+  font-family: "Source Serif Pro", serif;
+  margin: 0;
+}
+
+/* Imagem do produto */
+.cta-boxes .bottle-image {
+  position: relative;
+  margin: 12px 0;
+  text-align: center;
+}
+.cta-boxes .bottle-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Preço */
+.cta-boxes .price-details {
+  margin: 10px 0;
+}
+
+.cta-boxes .price-details h4.price {
+  font-size: 36px;
+  font-weight: 900;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1;
+  font-family: Lato, sans-serif;
+}
+
+.cta-boxes .price-details h4.price .r {
+  font-size: 56%;
+}
+
+.cta-boxes .price-details h4.price .pb {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  padding-left: 8px;
+  padding-top: 10px;
+  color: #4e4e4e;
+  line-height: 1.1;
+}
+
+/* Strike vermelho */
+.strike {
+  position: relative;
+  color: #999;
+  font-weight: 500;
+}
 .strike::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  border-top: 1px solid #dc2626; /* Tailwind's red-600 */
-  transform: translateY(-50%);
+  left: -4%;
+  bottom: 40%;
+  width: 108%;
+  border-bottom: 2px solid #bc0000;
+  transform: rotate(6deg);
+}
+
+/* Botão */
+.cta-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #333;
+  background: linear-gradient(180deg, #f6dda1, #f0c14b);
+  border: 1px solid #fff;
+  border-color: #a88734 #9c7e31 #846a29;
+  border-radius: 5px;
+  padding: 10px;
+  text-shadow: 1px 1px 0px #f9ffac;
+  text-decoration: none;
+  transition: 0.4s;
+  position: relative;
+}
+.cta-button:hover {
+  background: linear-gradient(180deg, #ffdf28, #ffca11);
+  cursor: pointer;
+}
+
+/* Total e frete */
+.cta-boxes h5.total {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin: 12px 0 0;
+}
+
+.cta-boxes p.freeship {
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Garantia */
+.cta-boxes p.guarantee {
+  font-size: 15px;
+  color: #fff;
+  background-color: #4b5563;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px 0 0;
+  padding: 10px 5px;
+  border-radius: 0 0 8px 8px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Badge de destaque */
+.cta-boxes .badge {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 10%;
+  width: 80px;
+  filter: drop-shadow(0 1px 1px rgba(50,90,110,0.125)) drop-shadow(0 1px 1px rgba(50,90,110,0.15));
+}
+
+/* Ebooks */
+.ebook {
+  transform: skewX(1deg) skewY(-1deg);
+}
+
+/* Escalas para destaque (desktop) */
+@media(min-width: 961px) {
+  .cta-boxes .pack6 {
+    transform: scale(1.02);
+  }
+  .cta-boxes .pack1,
+  .cta-boxes .pack2,
+  .cta-boxes .pack3 {
+    transform: scale(0.88);
+  }
+}
+
+/* Responsivo mobile */
+@media(max-width: 767px) {
+  .cta-boxes {
+    flex-direction: column;
+    max-width: 470px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .cta-boxes .cta-box {
+    width: 100%;
+    max-width: 420px; /* ou ajuste conforme o layout */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Ordem padrão */
+.cta-boxes .pack1,
+.cta-boxes .pack2 {
+  order: 1;
+}
+
+.cta-boxes .pack6 {
+  order: 2;
+}
+
+.cta-boxes .pack3 {
+  order: 3;
+}
+
+/* Ordem em telas pequenas (mobile) */
+@media (max-width: 767px) {
+  .cta-boxes .pack1,
+  .cta-boxes .pack2 {
+    order: 3;
+  }
+
+  .cta-boxes .pack6 {
+    order: 1;
+  }
+
+  .cta-boxes .pack3 {
+    order: 2;
+  }
 }
