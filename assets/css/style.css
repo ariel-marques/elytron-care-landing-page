@@ -699,10 +699,20 @@ p:first-child {
   line-height: 1.4;
 }
 
-#bonus-popup input,
-#bonus-popup button {
+/* Estilos só para os inputs e botão do formulário */
+#bonus-form input,
+#bonus-form button[type="submit"] {
   font-size: 0.9rem;
   padding: 0.3rem 0.5rem;
+}
+
+/* Remove a herança no X */
+#close-bonus-popup {
+  font-size: 1.8rem !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  width: auto;
+  height: auto;
 }
 
 #bonus-popup img {
