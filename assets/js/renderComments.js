@@ -1,46 +1,57 @@
 const commentsContainer = document.querySelector('#hero-comments .space-y-3');
 
+// Pools atualizadas para o seu banco real
+const avatarPools = {
+  'older-men': Array.from({ length: 10 }, (_, i) => i + 1),
+  'older-women': Array.from({ length: 10 }, (_, i) => i + 1),
+  'young-men': Array.from({ length: 13 }, (_, i) => i + 1),
+  'young-women': Array.from({ length: 31 }, (_, i) => i + 1),
+};
+
 function getRandomLikes() {
   return Math.floor(Math.random() * (70 - 5 + 1)) + 5;
 }
 
+// Sem repetição até esgotar o grupo, respeitando seus limites
 function getRandomAvatar(gender, ageGroup) {
   let folder = '';
-  let maxImages = 1;
-
   if (gender === 'male' && ageGroup === 'older') {
     folder = 'older-men';
-    maxImages = 6;
   } else if (gender === 'female' && ageGroup === 'older') {
     folder = 'older-women';
-    maxImages = 7;
   } else if (gender === 'male' && ageGroup === 'young') {
     folder = 'young-men';
-    maxImages = 13;
   } else if (gender === 'female' && ageGroup === 'young') {
     folder = 'young-women';
-    maxImages = 31;
   }
 
-  const randomNumber = Math.floor(Math.random() * maxImages) + 1;
-  return `assets/img/people/${folder}/${randomNumber}.jpg`;
+  // Repopula pool se acabou as opções (libera repetição)
+  if (!avatarPools[folder] || avatarPools[folder].length === 0) {
+    if (folder === 'older-men') avatarPools[folder] = Array.from({ length: 10 }, (_, i) => i + 1);
+    if (folder === 'older-women') avatarPools[folder] = Array.from({ length: 10 }, (_, i) => i + 1);
+    if (folder === 'young-men') avatarPools[folder] = Array.from({ length: 13 }, (_, i) => i + 1);
+    if (folder === 'young-women') avatarPools[folder] = Array.from({ length: 31 }, (_, i) => i + 1);
+  }
+
+  // Sorteia e remove para garantir não repetição até esgotar
+  const pool = avatarPools[folder];
+  const idx = Math.floor(Math.random() * pool.length);
+  const num = pool.splice(idx, 1)[0];
+
+  return `assets/img/people/${folder}/${num}.jpg`;
 }
 
 function shuffleArray(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-// 👇 Gera tempo aleatório em formato realista
 function getRandomTimeAgo() {
   const rand = Math.random();
   if (rand < 0.33) {
-    // Minutos (5min a 59min)
     return `${Math.floor(Math.random() * (59 - 5 + 1)) + 5}m`;
   } else if (rand < 0.66) {
-    // Horas (1h a 10h)
     return `${Math.floor(Math.random() * 10) + 1}h`;
   } else {
-    // Dias (1 a 2 dias)
     return `${Math.floor(Math.random() * 2) + 1}d`;
   }
 }
@@ -77,7 +88,7 @@ function createCommentElement(commentObj) {
   `;
 }
 
-// Embaralhar e renderizar comentários
+// Embaralha e renderiza até 40 comentários
 const shuffledComments = shuffleArray(commentsData).slice(0, 40);
 shuffledComments.forEach(comment => {
   commentsContainer.insertAdjacentHTML('beforeend', createCommentElement(comment));
