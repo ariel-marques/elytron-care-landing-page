@@ -99,13 +99,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
 // TRIGGER OFFER AFTER A SET TIMEOUT (E.G., SIMULATE VIDEO TIME)
-setTimeout(() => {
+function showOfferCTA() {
   document.getElementById('offer').classList.remove('hidden');
   document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
-}, 7 * 1 * 1000);
+}
+
+// Aguarda player carregar e seta evento
+window.addEventListener('DOMContentLoaded', function() {
+  var checkPlayer = setInterval(function() {
+    // player.js cria um objeto global chamado 'player'
+    if (window.player && typeof player.on === "function") {
+      player.on('cta', showOfferCTA); // ou 'complete'
+      clearInterval(checkPlayer);
+    }
+  }, 500);
+});
 
 // HEADLINES ROTATIVAS DO TIMER
 const offerPhrases = [
@@ -180,7 +189,7 @@ function showBonusPopup() {
   }
 }
 
-// Função para fechar o popup de bônus
+// Fecha o popup de bônus
 function closeBonusPopup() {
   const bonusPopup = document.getElementById('bonus-popup');
   if (bonusPopup) {
@@ -188,18 +197,20 @@ function closeBonusPopup() {
   }
 }
 
-// Fecha o popup ao clicar no botão "X"
+// Botão de fechar
 document.addEventListener('DOMContentLoaded', function() {
   const closeBtn = document.getElementById('close-bonus-popup');
   if (closeBtn) {
     closeBtn.addEventListener('click', closeBonusPopup);
   }
-});
 
-// --- SIMULAÇÃO PARA TESTAR AGORA ---
-// Substituir pelo trigger real do VTurb
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(showBonusPopup, 2000); 
+  // Escuta o evento do player para exibir o bônus ao final do vídeo
+  var checkPlayer = setInterval(function() {
+    if (window.player && typeof player.on === "function") {
+      player.on('complete', showBonusPopup);
+      clearInterval(checkPlayer);
+    }
+  }, 500);
 });
 
 // --- INTEGRAÇÃO REAL VTURB ---
