@@ -99,11 +99,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// TRIGGER OFFER AFTER A SET TIMEOUT (E.G., SIMULATE VIDEO TIME)
+// TRIGGER OFFER AFTER A SET TIMEOUT
 function showOfferCTA() {
   document.getElementById('offer').classList.remove('hidden');
   document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
 }
+
+window.addEventListener('DOMContentLoaded', function() {
+  var checkPlayer = setInterval(function() {
+    if (window.player && typeof player.on === "function") {
+      // Adiciona o evento cuepoint para 40min54seg (2454 segundos)
+      player.on('cuepoint', function(event) {
+        if (event.detail.seconds === 2454) {
+          showOfferCTA();
+        }
+      });
+      clearInterval(checkPlayer);
+    }
+  }, 500);
+});
 
 // Aguarda player carregar e seta evento
 window.addEventListener('DOMContentLoaded', function() {
