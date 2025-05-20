@@ -37,7 +37,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <link rel="stylesheet" href="assets/css/style.css?vs20250513" />
-
+    <style>
+        .esconder {
+          display: none;
+        }
+      </style>
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -59,7 +63,7 @@
     </noscript>
 
     <!-- UTMify Script -->
-    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids data-utmify-ignore-iframe data-utmify-is-cartpanda async defer></script>
+    <!--script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids data-utmify-ignore-iframe data-utmify-is-cartpanda async defer></script-->
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
@@ -91,10 +95,13 @@
     <section class="text-center py-12 px-4 max-w-3xl mx-auto">
         <h1 id="headline" class="text-2xl sm:text-4xl font-bold mb-4"></h1>
         <!-- VSL VIDEO -->
-        <div id="vid_682805e15bea179ed629c792" style="position: relative; width: 100%; padding: 125% 0 0;"> <img id="thumb_682805e15bea179ed629c792" src="https://images.converteai.net/3a86eb0d-c4a3-4ea6-9b79-0fb7ecc619c7/players/682805e15bea179ed629c792/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail"> <div id="backdrop_682805e15bea179ed629c792" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div> </div> <script type="text/javascript" id="scr_682805e15bea179ed629c792"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/3a86eb0d-c4a3-4ea6-9b79-0fb7ecc619c7/players/682805e15bea179ed629c792/player.js?v=2", s.async=!0,document.head.appendChild(s); </script>
+        <div id="vid_682805e15bea179ed629c792" style="position: relative; width: 100%; padding: 125% 0 0;"> <img id="thumb_682805e15bea179ed629c792" src="https://images.converteai.net/3a86eb0d-c4a3-4ea6-9b79-0fb7ecc619c7/players/682805e15bea179ed629c792/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail">
+            <div id="backdrop_682805e15bea179ed629c792" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div>
+        </div>
+        <script type="text/javascript" id="scr_682805e15bea179ed629c792"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/3a86eb0d-c4a3-4ea6-9b79-0fb7ecc619c7/players/682805e15bea179ed629c792/player.js?v=2", s.async = !0, document.head.appendChild(s); </script>
 
         <!-- TRIGGER SECTION -->
-        <div class="flex justify-center space-x-6 mb-4 font-semibold">
+        <div class="flex justify-center space-x-6 my-4 font-semibold">
             <div class="text-center">
                 <div class="flex justify-center items-center gap-2 mb-1">
                     <span class="mt-2 online-dot online-dot"></span>
@@ -110,9 +117,9 @@
             </div>
         </div>
     </section>
-    
+
     <!-- OFFER CARDS -->
-    <section id="offer-cards" class="cta-boxes cta-boxes-new pb-5 hidden">
+    <section id="offer-cards" class="cta-boxes cta-boxes-new pb-5 esconder">
 
         <!-- 6 bottles -->
         <div class="cta-box pack6 new6pack bg-green-100" style="cursor: pointer;">
@@ -241,7 +248,7 @@
                                     <span class="ml-3 rounded-full px-3 text-xs sm:text-base italic text-green-700 border border-green-500 shadow-md whitespace-nowrap">
                                         $97 Value
                                     </span>
-                                </button>
+                                    </button>
                                 <ul class="text-sm md:text-base pl-5 list-disc mt-1 text-gray-800">
                                     <li>Boost insulin sensitivity naturally</li>
                                     <li>Reduce inflammation and improve metabolism</li>
@@ -249,8 +256,17 @@
                                     <li>Burn stubborn fat and enhance energy levels</li>
                                 </ul>
                                 <button class="uk-text-right text-sm italic flex items-center text-green-600 px-5 rounded-full border bg-neutral-100 w-fit shadow-md py-0.5 mt-2">
-                                    <span class="mr-1 text-sm"><svg fill="#007b00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M58.741,55.019L52.5,61.01V39.881c0-1.104-0.896-2-2-2s-2,0.896-2,2v21.908l-6.52-6.771c-0.78-0.781-1.922-0.781-2.703,0 s-0.719,2.047,0.062,2.828l9.825,9.795c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l0.147-0.143 c0.173-0.126,0.326-0.277,0.451-0.451l9.203-9.201c0.781-0.781,0.656-2.047-0.125-2.828C60.914,54.237,59.521,54.237,58.741,55.019 z"></path> <path d="M76.791,37.795c-1.252,0-2.365,0.347-3.347,0.652c-0.246,0.076-0.487,0.151-0.722,0.217 c-4.002-9.179-13.133-15.237-23.221-15.237c-12.673,0-23.236,9.248-25.049,21.467c-1.082-0.213-2.162-0.32-3.228-0.32 c-9.694,0-17.287,7.136-17.287,16.488c0,9.324,7.593,16.438,17.287,16.438h55.566c11.562,0,20.621-8.554,20.621-19.716 C97.412,46.469,88.354,37.795,76.791,37.795z M76.791,73.5H21.225c-7.575,0-13.287-5.239-13.287-12.438 c0-7.229,5.712-12.583,13.287-12.583c1.289,0,2.616,0.257,3.886,0.651l0.443,0.177c0.593,0.204,1.251,0.13,1.772-0.22 c0.521-0.353,0.847-0.923,0.879-1.552c0.569-11.278,9.924-20.11,21.296-20.11c8.961,0,17.025,5.68,20.068,14.133 c0.285,0.793,1.113,1.323,1.957,1.323c1.131,0,2.18-0.326,3.105-0.614c0.779-0.243,1.514-0.471,2.158-0.471 c9.32,0,16.621,6.917,16.621,15.989C93.412,66.703,86.111,73.5,76.791,73.5z"></path> </g> </g></svg></span> Instant Digital Download
-                                </p>
+                                    <span class="mr-1 text-sm"><svg fill="#007b00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g>
+                                                    <path d="M58.741,55.019L52.5,61.01V39.881c0-1.104-0.896-2-2-2s-2,0.896-2,2v21.908l-6.52-6.771c-0.78-0.781-1.922-0.781-2.703,0 s-0.719,2.047,0.062,2.828l9.825,9.795c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l0.147-0.143 c0.173-0.126,0.326-0.277,0.451-0.451l9.203-9.201c0.781-0.781,0.656-2.047-0.125-2.828C60.914,54.237,59.521,54.237,58.741,55.019 z"></path>
+                                                    <path d="M76.791,37.795c-1.252,0-2.365,0.347-3.347,0.652c-0.246,0.076-0.487,0.151-0.722,0.217 c-4.002-9.179-13.133-15.237-23.221-15.237c-12.673,0-23.236,9.248-25.049,21.467c-1.082-0.213-2.162-0.32-3.228-0.32 c-9.694,0-17.287,7.136-17.287,16.488c0,9.324,7.593,16.438,17.287,16.438h55.566c11.562,0,20.621-8.554,20.621-19.716 C97.412,46.469,88.354,37.795,76.791,37.795z M76.791,73.5H21.225c-7.575,0-13.287-5.239-13.287-12.438 c0-7.229,5.712-12.583,13.287-12.583c1.289,0,2.616,0.257,3.886,0.651l0.443,0.177c0.593,0.204,1.251,0.13,1.772-0.22 c0.521-0.353,0.847-0.923,0.879-1.552c0.569-11.278,9.924-20.11,21.296-20.11c8.961,0,17.025,5.68,20.068,14.133 c0.285,0.793,1.113,1.323,1.957,1.323c1.131,0,2.18-0.326,3.105-0.614c0.779-0.243,1.514-0.471,2.158-0.471 c9.32,0,16.621,6.917,16.621,15.989C93.412,66.703,86.111,73.5,76.791,73.5z"></path>
+                                                </g>
+                                            </g>
+                                        </svg></span> Instant Digital Download
+                                    </p>
                             </div>
                         </div>
                     </div>
@@ -270,7 +286,7 @@
                                     <span class="ml-3 rounded-full px-3 text-xs sm:text-base italic text-green-700 border border-green-500 shadow-md whitespace-nowrap">
                                         $77 Value
                                     </span>
-                                </button>
+                                    </button>
                                 <ul class="text-sm md:text-base pl-5 list-disc mt-1 text-gray-800">
                                     <li>Discover little-known dietary secrets that naturally regulate blood sugar</li>
                                     <li>Learn the "diabetes-proof" morning routine that stabilizes glucose all day</li>
@@ -278,7 +294,16 @@
                                     <li>Master how to maintain insulin sensitivity for life—without restrictive diets</li>
                                 </ul>
                                 <button class="uk-text-right text-sm italic flex items-center text-green-600 px-5 rounded-full border bg-neutral-100 w-fit shadow-md py-0.5 mt-2">
-                                    <span class="mr-1 text-sm"><svg fill="#007b00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M58.741,55.019L52.5,61.01V39.881c0-1.104-0.896-2-2-2s-2,0.896-2,2v21.908l-6.52-6.771c-0.78-0.781-1.922-0.781-2.703,0 s-0.719,2.047,0.062,2.828l9.825,9.795c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l0.147-0.143 c0.173-0.126,0.326-0.277,0.451-0.451l9.203-9.201c0.781-0.781,0.656-2.047-0.125-2.828C60.914,54.237,59.521,54.237,58.741,55.019 z"></path> <path d="M76.791,37.795c-1.252,0-2.365,0.347-3.347,0.652c-0.246,0.076-0.487,0.151-0.722,0.217 c-4.002-9.179-13.133-15.237-23.221-15.237c-12.673,0-23.236,9.248-25.049,21.467c-1.082-0.213-2.162-0.32-3.228-0.32 c-9.694,0-17.287,7.136-17.287,16.488c0,9.324,7.593,16.438,17.287,16.438h55.566c11.562,0,20.621-8.554,20.621-19.716 C97.412,46.469,88.354,37.795,76.791,37.795z M76.791,73.5H21.225c-7.575,0-13.287-5.239-13.287-12.438 c0-7.229,5.712-12.583,13.287-12.583c1.289,0,2.616,0.257,3.886,0.651l0.443,0.177c0.593,0.204,1.251,0.13,1.772-0.22 c0.521-0.353,0.847-0.923,0.879-1.552c0.569-11.278,9.924-20.11,21.296-20.11c8.961,0,17.025,5.68,20.068,14.133 c0.285,0.793,1.113,1.323,1.957,1.323c1.131,0,2.18-0.326,3.105-0.614c0.779-0.243,1.514-0.471,2.158-0.471 c9.32,0,16.621,6.917,16.621,15.989C93.412,66.703,86.111,73.5,76.791,73.5z"></path> </g> </g></svg></span> <a href="#"> Instant Digital Download</a>
+                                    <span class="mr-1 text-sm"><svg fill="#007b00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g>
+                                                    <path d="M58.741,55.019L52.5,61.01V39.881c0-1.104-0.896-2-2-2s-2,0.896-2,2v21.908l-6.52-6.771c-0.78-0.781-1.922-0.781-2.703,0 s-0.719,2.047,0.062,2.828l9.825,9.795c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l0.147-0.143 c0.173-0.126,0.326-0.277,0.451-0.451l9.203-9.201c0.781-0.781,0.656-2.047-0.125-2.828C60.914,54.237,59.521,54.237,58.741,55.019 z"></path>
+                                                    <path d="M76.791,37.795c-1.252,0-2.365,0.347-3.347,0.652c-0.246,0.076-0.487,0.151-0.722,0.217 c-4.002-9.179-13.133-15.237-23.221-15.237c-12.673,0-23.236,9.248-25.049,21.467c-1.082-0.213-2.162-0.32-3.228-0.32 c-9.694,0-17.287,7.136-17.287,16.488c0,9.324,7.593,16.438,17.287,16.438h55.566c11.562,0,20.621-8.554,20.621-19.716 C97.412,46.469,88.354,37.795,76.791,37.795z M76.791,73.5H21.225c-7.575,0-13.287-5.239-13.287-12.438 c0-7.229,5.712-12.583,13.287-12.583c1.289,0,2.616,0.257,3.886,0.651l0.443,0.177c0.593,0.204,1.251,0.13,1.772-0.22 c0.521-0.353,0.847-0.923,0.879-1.552c0.569-11.278,9.924-20.11,21.296-20.11c8.961,0,17.025,5.68,20.068,14.133 c0.285,0.793,1.113,1.323,1.957,1.323c1.131,0,2.18-0.326,3.105-0.614c0.779-0.243,1.514-0.471,2.158-0.471 c9.32,0,16.621,6.917,16.621,15.989C93.412,66.703,86.111,73.5,76.791,73.5z"></path>
+                                                </g>
+                                            </g>
+                                        </svg></span> <a href="#"> Instant Digital Download</a>
                                 </button>
                             </div>
                         </div>
@@ -299,7 +324,7 @@
                                     <span class="ml-3 rounded-full px-3 text-xs sm:text-base italic text-green-700 border border-green-500 shadow-md whitespace-nowrap">
                                         $59 Value
                                     </span>
-                                </button>
+                                    </button>
                                 <ul class="text-sm md:text-base pl-5 list-disc mt-1 text-gray-800">
                                     <li>Flush out toxins that worsen diabetes and insulin resistance</li>
                                     <li>Reboot your metabolism for faster fat burning</li>
@@ -307,7 +332,16 @@
                                 </ul>
                                 <button class="uk-text-right text-sm italic flex items-center text-green-600 px-5 rounded-full border bg-neutral-100 w-fit shadow-md py-0.5 mt-2">
                                     <span class="mr-1 text-sm">
-                                        <svg fill="#007b00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M58.741,55.019L52.5,61.01V39.881c0-1.104-0.896-2-2-2s-2,0.896-2,2v21.908l-6.52-6.771c-0.78-0.781-1.922-0.781-2.703,0 s-0.719,2.047,0.062,2.828l9.825,9.795c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l0.147-0.143 c0.173-0.126,0.326-0.277,0.451-0.451l9.203-9.201c0.781-0.781,0.656-2.047-0.125-2.828C60.914,54.237,59.521,54.237,58.741,55.019 z"></path> <path d="M76.791,37.795c-1.252,0-2.365,0.347-3.347,0.652c-0.246,0.076-0.487,0.151-0.722,0.217 c-4.002-9.179-13.133-15.237-23.221-15.237c-12.673,0-23.236,9.248-25.049,21.467c-1.082-0.213-2.162-0.32-3.228-0.32 c-9.694,0-17.287,7.136-17.287,16.488c0,9.324,7.593,16.438,17.287,16.438h55.566c11.562,0,20.621-8.554,20.621-19.716 C97.412,46.469,88.354,37.795,76.791,37.795z M76.791,73.5H21.225c-7.575,0-13.287-5.239-13.287-12.438 c0-7.229,5.712-12.583,13.287-12.583c1.289,0,2.616,0.257,3.886,0.651l0.443,0.177c0.593,0.204,1.251,0.13,1.772-0.22 c0.521-0.353,0.847-0.923,0.879-1.552c0.569-11.278,9.924-20.11,21.296-20.11c8.961,0,17.025,5.68,20.068,14.133 c0.285,0.793,1.113,1.323,1.957,1.323c1.131,0,2.18-0.326,3.105-0.614c0.779-0.243,1.514-0.471,2.158-0.471 c9.32,0,16.621,6.917,16.621,15.989C93.412,66.703,86.111,73.5,76.791,73.5z"></path> </g> </g></svg>
+                                        <svg fill="#007b00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g>
+                                                    <path d="M58.741,55.019L52.5,61.01V39.881c0-1.104-0.896-2-2-2s-2,0.896-2,2v21.908l-6.52-6.771c-0.78-0.781-1.922-0.781-2.703,0 s-0.719,2.047,0.062,2.828l9.825,9.795c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l0.147-0.143 c0.173-0.126,0.326-0.277,0.451-0.451l9.203-9.201c0.781-0.781,0.656-2.047-0.125-2.828C60.914,54.237,59.521,54.237,58.741,55.019 z"></path>
+                                                    <path d="M76.791,37.795c-1.252,0-2.365,0.347-3.347,0.652c-0.246,0.076-0.487,0.151-0.722,0.217 c-4.002-9.179-13.133-15.237-23.221-15.237c-12.673,0-23.236,9.248-25.049,21.467c-1.082-0.213-2.162-0.32-3.228-0.32 c-9.694,0-17.287,7.136-17.287,16.488c0,9.324,7.593,16.438,17.287,16.438h55.566c11.562,0,20.621-8.554,20.621-19.716 C97.412,46.469,88.354,37.795,76.791,37.795z M76.791,73.5H21.225c-7.575,0-13.287-5.239-13.287-12.438 c0-7.229,5.712-12.583,13.287-12.583c1.289,0,2.616,0.257,3.886,0.651l0.443,0.177c0.593,0.204,1.251,0.13,1.772-0.22 c0.521-0.353,0.847-0.923,0.879-1.552c0.569-11.278,9.924-20.11,21.296-20.11c8.961,0,17.025,5.68,20.068,14.133 c0.285,0.793,1.113,1.323,1.957,1.323c1.131,0,2.18-0.326,3.105-0.614c0.779-0.243,1.514-0.471,2.158-0.471 c9.32,0,16.621,6.917,16.621,15.989C93.412,66.703,86.111,73.5,76.791,73.5z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
                                     </span>
                                     <span class="italic"><a href="#"> Instant Digital Download</a></span>
                                 </button>
@@ -330,15 +364,24 @@
                                     <span class="ml-3 rounded-full px-3 text-xs sm:text-base italic text-green-700 border border-green-500 shadow-md whitespace-nowrap">
                                         $39 Value
                                     </span>
-                                </button>
+                                    </button>
                                 <ul class="text-sm md:text-base pl-5 list-disc mt-1 text-gray-800">
                                     <li>10 easy-to-make beverages that help stabilize blood sugar fast</li>
                                     <li>Reduces cravings and prevents glucose spikes</li>
                                     <li>Boosts gut health and digestion</li>
                                 </ul>
                                 <button class="uk-text-right text-sm italic flex items-center text-green-600 px-5 rounded-full border bg-neutral-100 w-fit shadow-md py-0.5 mt-2">
-                                    <span class="mr-1 text-sm"><svg fill="#007b00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M58.741,55.019L52.5,61.01V39.881c0-1.104-0.896-2-2-2s-2,0.896-2,2v21.908l-6.52-6.771c-0.78-0.781-1.922-0.781-2.703,0 s-0.719,2.047,0.062,2.828l9.825,9.795c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l0.147-0.143 c0.173-0.126,0.326-0.277,0.451-0.451l9.203-9.201c0.781-0.781,0.656-2.047-0.125-2.828C60.914,54.237,59.521,54.237,58.741,55.019 z"></path> <path d="M76.791,37.795c-1.252,0-2.365,0.347-3.347,0.652c-0.246,0.076-0.487,0.151-0.722,0.217 c-4.002-9.179-13.133-15.237-23.221-15.237c-12.673,0-23.236,9.248-25.049,21.467c-1.082-0.213-2.162-0.32-3.228-0.32 c-9.694,0-17.287,7.136-17.287,16.488c0,9.324,7.593,16.438,17.287,16.438h55.566c11.562,0,20.621-8.554,20.621-19.716 C97.412,46.469,88.354,37.795,76.791,37.795z M76.791,73.5H21.225c-7.575,0-13.287-5.239-13.287-12.438 c0-7.229,5.712-12.583,13.287-12.583c1.289,0,2.616,0.257,3.886,0.651l0.443,0.177c0.593,0.204,1.251,0.13,1.772-0.22 c0.521-0.353,0.847-0.923,0.879-1.552c0.569-11.278,9.924-20.11,21.296-20.11c8.961,0,17.025,5.68,20.068,14.133 c0.285,0.793,1.113,1.323,1.957,1.323c1.131,0,2.18-0.326,3.105-0.614c0.779-0.243,1.514-0.471,2.158-0.471 c9.32,0,16.621,6.917,16.621,15.989C93.412,66.703,86.111,73.5,76.791,73.5z"></path> </g> </g></svg></span> Instant Digital Download
-                                </p>
+                                    <span class="mr-1 text-sm"><svg fill="#007b00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g>
+                                                    <path d="M58.741,55.019L52.5,61.01V39.881c0-1.104-0.896-2-2-2s-2,0.896-2,2v21.908l-6.52-6.771c-0.78-0.781-1.922-0.781-2.703,0 s-0.719,2.047,0.062,2.828l9.825,9.795c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l0.147-0.143 c0.173-0.126,0.326-0.277,0.451-0.451l9.203-9.201c0.781-0.781,0.656-2.047-0.125-2.828C60.914,54.237,59.521,54.237,58.741,55.019 z"></path>
+                                                    <path d="M76.791,37.795c-1.252,0-2.365,0.347-3.347,0.652c-0.246,0.076-0.487,0.151-0.722,0.217 c-4.002-9.179-13.133-15.237-23.221-15.237c-12.673,0-23.236,9.248-25.049,21.467c-1.082-0.213-2.162-0.32-3.228-0.32 c-9.694,0-17.287,7.136-17.287,16.488c0,9.324,7.593,16.438,17.287,16.438h55.566c11.562,0,20.621-8.554,20.621-19.716 C97.412,46.469,88.354,37.795,76.791,37.795z M76.791,73.5H21.225c-7.575,0-13.287-5.239-13.287-12.438 c0-7.229,5.712-12.583,13.287-12.583c1.289,0,2.616,0.257,3.886,0.651l0.443,0.177c0.593,0.204,1.251,0.13,1.772-0.22 c0.521-0.353,0.847-0.923,0.879-1.552c0.569-11.278,9.924-20.11,21.296-20.11c8.961,0,17.025,5.68,20.068,14.133 c0.285,0.793,1.113,1.323,1.957,1.323c1.131,0,2.18-0.326,3.105-0.614c0.779-0.243,1.514-0.471,2.158-0.471 c9.32,0,16.621,6.917,16.621,15.989C93.412,66.703,86.111,73.5,76.791,73.5z"></path>
+                                                </g>
+                                            </g>
+                                        </svg></span> Instant Digital Download
+                                    </p>
                             </div>
                         </div>
                     </div>
@@ -358,15 +401,24 @@
                                     <span class="ml-3 rounded-full px-3 text-xs sm:text-base italic text-green-700 border border-green-500 shadow-md whitespace-nowrap">
                                         $67 Value
                                     </span>
-                                </button>
+                                    </button>
                                 <ul class="text-sm md:text-base pl-5 list-disc mt-1 text-gray-800">
                                     <li>Discover how people in longevity hotspots live over 100 years—without diabetes</li>
                                     <li>Learn ancient herbal remedies that regulate blood sugar naturally</li>
                                     <li>Find out about a shocking breathing trick that stabilizes glucose instantly</li>
                                 </ul>
                                 <button class="uk-text-right text-sm italic flex items-center text-green-600 px-5 rounded-full border bg-neutral-100 w-fit shadow-md py-0.5 mt-2">
-                                    <span class="mr-1 text-sm"><svg fill="#007b00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M58.741,55.019L52.5,61.01V39.881c0-1.104-0.896-2-2-2s-2,0.896-2,2v21.908l-6.52-6.771c-0.78-0.781-1.922-0.781-2.703,0 s-0.719,2.047,0.062,2.828l9.825,9.795c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l0.147-0.143 c0.173-0.126,0.326-0.277,0.451-0.451l9.203-9.201c0.781-0.781,0.656-2.047-0.125-2.828C60.914,54.237,59.521,54.237,58.741,55.019 z"></path> <path d="M76.791,37.795c-1.252,0-2.365,0.347-3.347,0.652c-0.246,0.076-0.487,0.151-0.722,0.217 c-4.002-9.179-13.133-15.237-23.221-15.237c-12.673,0-23.236,9.248-25.049,21.467c-1.082-0.213-2.162-0.32-3.228-0.32 c-9.694,0-17.287,7.136-17.287,16.488c0,9.324,7.593,16.438,17.287,16.438h55.566c11.562,0,20.621-8.554,20.621-19.716 C97.412,46.469,88.354,37.795,76.791,37.795z M76.791,73.5H21.225c-7.575,0-13.287-5.239-13.287-12.438 c0-7.229,5.712-12.583,13.287-12.583c1.289,0,2.616,0.257,3.886,0.651l0.443,0.177c0.593,0.204,1.251,0.13,1.772-0.22 c0.521-0.353,0.847-0.923,0.879-1.552c0.569-11.278,9.924-20.11,21.296-20.11c8.961,0,17.025,5.68,20.068,14.133 c0.285,0.793,1.113,1.323,1.957,1.323c1.131,0,2.18-0.326,3.105-0.614c0.779-0.243,1.514-0.471,2.158-0.471 c9.32,0,16.621,6.917,16.621,15.989C93.412,66.703,86.111,73.5,76.791,73.5z"></path> </g> </g></svg></span> Instant Digital Download
-                                </p>
+                                    <span class="mr-1 text-sm"><svg fill="#007b00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g>
+                                                    <path d="M58.741,55.019L52.5,61.01V39.881c0-1.104-0.896-2-2-2s-2,0.896-2,2v21.908l-6.52-6.771c-0.78-0.781-1.922-0.781-2.703,0 s-0.719,2.047,0.062,2.828l9.825,9.795c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l0.147-0.143 c0.173-0.126,0.326-0.277,0.451-0.451l9.203-9.201c0.781-0.781,0.656-2.047-0.125-2.828C60.914,54.237,59.521,54.237,58.741,55.019 z"></path>
+                                                    <path d="M76.791,37.795c-1.252,0-2.365,0.347-3.347,0.652c-0.246,0.076-0.487,0.151-0.722,0.217 c-4.002-9.179-13.133-15.237-23.221-15.237c-12.673,0-23.236,9.248-25.049,21.467c-1.082-0.213-2.162-0.32-3.228-0.32 c-9.694,0-17.287,7.136-17.287,16.488c0,9.324,7.593,16.438,17.287,16.438h55.566c11.562,0,20.621-8.554,20.621-19.716 C97.412,46.469,88.354,37.795,76.791,37.795z M76.791,73.5H21.225c-7.575,0-13.287-5.239-13.287-12.438 c0-7.229,5.712-12.583,13.287-12.583c1.289,0,2.616,0.257,3.886,0.651l0.443,0.177c0.593,0.204,1.251,0.13,1.772-0.22 c0.521-0.353,0.847-0.923,0.879-1.552c0.569-11.278,9.924-20.11,21.296-20.11c8.961,0,17.025,5.68,20.068,14.133 c0.285,0.793,1.113,1.323,1.957,1.323c1.131,0,2.18-0.326,3.105-0.614c0.779-0.243,1.514-0.471,2.158-0.471 c9.32,0,16.621,6.917,16.621,15.989C93.412,66.703,86.111,73.5,76.791,73.5z"></path>
+                                                </g>
+                                            </g>
+                                        </svg></span> Instant Digital Download
+                                    </p>
                             </div>
                         </div>
                     </div>
@@ -496,326 +548,6 @@
         </div>
     </section>
 
-    <!--div class="w-full max-w-4xl mx-auto" id="hero-comments">
-        <section class="comentario py-8 m-4 bg-white border shadow rounded-2xl">
-            <div class="max-w-4xl mx-auto px-4">
-                <div class="transform transition-all duration-700 translate-y-0 opacity-100">
-                    <div class="flex items-center justify-between mb-4">
-                        <h2 class="text-[15px] font-semibold text-[#050505]">137 Comments</h2>
-                        <div class="flex items-center gap-2 text-xs text-[#65676B]"> <button class="hover:text-[#050505]">Most Relevant</button> <span>•</span> <button class="hover:text-[#050505]">Newest</button> </div>
-                    </div>
-                    <div class="flex gap-2 mb-4"> <img src="assets/img/no-photo.jpg" alt="Your avatar" class="w-8 h-8 rounded-full object-cover"> <input type="text" placeholder="Write a comment..." class="w-full px-3 py-1.5 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#0866FF] focus:bg-white transition-colors flex-1"> </div>
-                    <div class="space-y-3 p-2">
-                        <div class="flex gap-2"> <img src="assets/img/people/woman/woman1.jpg" alt="Emily Davis" class="w-8 h-8 rounded-full object-cover">
-                            <div class="flex-1">
-                                <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                    <h3 class="text-[13px] font-semibold text-[#050505] text-left">Emily Thompson</h3>
-                                    <p class="text-[13px] text-[#050505] text-left"> Finally, something that actually works and addresses the real issue. Struggling with blood sugar levels was so frustrating, and restrictive diets only made things worse. Thanks to this formula, I feel like I’ve regained my energy and well-being. Thank you so much, doctor! </p>
-                                </div>
-                                <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Like
-                                    </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Reply
-                                    </button> <span class="text-[#65676B]">1h</span>
-                                    <div class="flex items-center gap-1">
-                                        <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                <path d="M7 10v12"></path>
-                                                <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                            </svg> </div> <span class="text-[#65676B]">13</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex gap-2"> <img src="assets/img/people/woman/woman2.jpg" alt="Jessica Brown" class="w-8 h-8 rounded-full object-cover">
-                            <div class="flex-1">
-                                <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                    <h3 class="text-[13px] font-semibold text-[#050505] text-left">Sarah Mitchell</h3>
-                                    <p class="text-[13px] text-[#050505] text-left"> Finally, a video that’s straight to the point and actually helps. </p>
-                                </div>
-                                <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Like
-                                    </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Reply
-                                    </button> <span class="text-[#65676B]">1h</span>
-                                    <div class="flex items-center gap-1">
-                                        <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                <path d="M7 10v12"></path>
-                                                <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                            </svg> </div> <span class="text-[#65676B]">13</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex gap-2"> <img src="assets/img/people/woman/woman3.jpg" alt="Ashley Taylor" class="w-8 h-8 rounded-full object-cover">
-                            <div class="flex-1">
-                                <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                    <h3 class="text-[13px] font-semibold text-[#050505] text-left">Jessica Adams</h3>
-                                    <p class="text-[13px] text-[#050505] text-left"> Does this really work? I’ve tried so many things that didn’t deliver results. </p>
-                                </div>
-                                <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Like
-                                    </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Reply
-                                    </button> <span class="text-[#65676B]">1h</span>
-                                    <div class="flex items-center gap-1">
-                                        <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                <path d="M7 10v12"></path>
-                                                <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                            </svg> </div> <span class="text-[#65676B]">13</span>
-                                    </div>
-                                </div>
-                                <div class="ml-13 mt-2">
-                                    <div class="flex gap-2 mt-2"> <img src="assets/img/people/woman/woman4.jpg" alt="Samantha Wilson" class="w-8 h-8 rounded-full object-cover">
-                                        <div class="flex-1">
-                                            <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                                <h3 class="text-[13px] font-semibold text-[#050505] text-left">Amanda Brooks</h3>
-                                                <p class="text-[13px] text-[#050505] text-left"> I’m 48, and I used to feel so tired and unmotivated. After trying so many solutions with no success, I decided to give this a shot. Using this formula every day for a month has changed my life. My blood sugar is stable, and I feel better than ever! </p>
-                                            </div>
-                                            <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Like
-                                                </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Reply
-                                                </button> <span class="text-[#65676B]">1h</span>
-                                                <div class="flex items-center gap-1">
-                                                    <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                            <path d="M7 10v12"></path>
-                                                            <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                                        </svg> </div> <span class="text-[#65676B]">15</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-2 mt-2"> <img src="assets/img/people/woman/woman5.jpg" alt="Gabriella Thompson" class="w-8 h-8 rounded-full object-cover">
-                                        <div class="flex-1">
-                                            <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                                <h3 class="text-[13px] font-semibold text-[#050505] text-left">Ashley Carter</h3>
-                                                <p class="text-[13px] text-[#050505] text-left"> I was skeptical at first. I stopped believing in anything after so many failed attempts. But since this formula is backed by science, I decided to try it. It’s the only thing that has truly helped me control my blood sugar. My husband can’t believe the results! </p>
-                                            </div>
-                                            <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Like
-                                                </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Reply
-                                                </button> <span class="text-[#65676B]">1h</span>
-                                                <div class="flex items-center gap-1">
-                                                    <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                            <path d="M7 10v12"></path>
-                                                            <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                                        </svg> </div> <span class="text-[#65676B]">15</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-2 mt-2"> <img src="assets/img/people/woman/woman6.jpg" alt="Megan Harding" class="w-8 h-8 rounded-full object-cover">
-                                        <div class="flex-1">
-                                            <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                                <h3 class="text-[13px] font-semibold text-[#050505] text-left">Elizabeth Walker</h3>
-                                                <p class="text-[13px] text-[#050505] text-left"> I wish I had found this video before spending so much on doctors and medications. At least now I feel like I have my life back! 😎 </p>
-                                            </div>
-                                            <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Like
-                                                </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Reply
-                                                </button> <span class="text-[#65676B]">1h</span>
-                                                <div class="flex items-center gap-1">
-                                                    <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                            <path d="M7 10v12"></path>
-                                                            <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                                        </svg> </div> <span class="text-[#65676B]">15</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-2 mt-2"> <img src="assets/img/people/woman/woman7.jpg" alt="Sophia Parker" class="w-8 h-8 rounded-full object-cover">
-                                        <div class="flex-1">
-                                            <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                                <h3 class="text-[13px] font-semibold text-[#050505] text-left">Jennifer Davis</h3>
-                                                <p class="text-[13px] text-[#050505] text-left"> I was so embarrassed to talk about it, but I showed the video to my sister, and she’s already seeing results within the first week. 🤭 </p>
-                                            </div>
-                                            <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Like
-                                                </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Reply
-                                                </button> <span class="text-[#65676B]">1h</span>
-                                                <div class="flex items-center gap-1">
-                                                    <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                            <path d="M7 10v12"></path>
-                                                            <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                                        </svg> </div> <span class="text-[#65676B]">15</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex gap-2"> <img src="assets/img/people/woman/woman8.jpg" alt="Olivia Morgan" class="w-8 h-8 rounded-full object-cover">
-                            <div class="flex-1">
-                                <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                    <h3 class="text-[13px] font-semibold text-[#050505] text-left">Nicole Harris</h3>
-                                    <p class="text-[13px] text-[#050505] text-left"> It’s amazing how fast this works. I started using the formula last week, and within just three days, I already felt more energetic and balanced. </p>
-                                </div>
-                                <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Like
-                                    </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Reply
-                                    </button> <span class="text-[#65676B]">1h</span>
-                                    <div class="flex items-center gap-1">
-                                        <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                <path d="M7 10v12"></path>
-                                                <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                            </svg> </div> <span class="text-[#65676B]">13</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex gap-2"> <img src="assets/img/people/woman/woman9.jpg" alt="Isabella Williams" class="w-8 h-8 rounded-full object-cover">
-                            <div class="flex-1">
-                                <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                    <h3 class="text-[13px] font-semibold text-[#050505] text-left">Lauren Miller</h3>
-                                    <p class="text-[13px] text-[#050505] text-left"> Now that my blood sugar is under control, I feel like a completely different person. I’m more active, and my confidence is through the roof. This formula is life-changing. 😍 </p>
-                                </div>
-                                <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Like
-                                    </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Reply
-                                    </button> <span class="text-[#65676B]">1h</span>
-                                    <div class="flex items-center gap-1">
-                                        <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                <path d="M7 10v12"></path>
-                                                <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                            </svg> </div> <span class="text-[#65676B]">13</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex gap-2"> <img src="assets/img/people/woman/woman10.jpg" alt="Ava Miller" class="w-8 h-8 rounded-full object-cover">
-                            <div class="flex-1">
-                                <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                    <h3 class="text-[13px] font-semibold text-[#050505] text-left">Rachel Cooper</h3>
-                                    <p class="text-[13px] text-[#050505] text-left"> This is incredible… it really works! I was so tired of trying different treatments that did nothing but frustrate me. This formula is easy, natural, and truly effective. Plus, no risks! 💗 </p>
-                                </div>
-                                <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Like
-                                    </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Reply
-                                    </button> <span class="text-[#65676B]">1h</span>
-                                    <div class="flex items-center gap-1">
-                                        <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                <path d="M7 10v12"></path>
-                                                <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                            </svg> </div> <span class="text-[#65676B]">13</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex gap-2"> <img src="assets/img/people/woman/woman11.jpg" alt="Julia Thompson" class="w-8 h-8 rounded-full object-cover">
-                            <div class="flex-1">
-                                <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                    <h3 class="text-[13px] font-semibold text-[#050505] text-left">Megan Rogers</h3>
-                                    <p class="text-[13px] text-[#050505] text-left"> Anyone else trying this and seeing results? Comment below! 😏🤭👇 </p>
-                                </div>
-                                <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Like
-                                    </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Reply
-                                    </button> <span class="text-[#65676B]">1h</span>
-                                    <div class="flex items-center gap-1">
-                                        <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                <path d="M7 10v12"></path>
-                                                <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                            </svg> </div> <span class="text-[#65676B]">13</span>
-                                    </div>
-                                </div>
-                                <div class="ml-13 mt-2">
-                                    <div class="flex gap-2 mt-2"> <img src="assets/img/people/woman/woman12.jpg" alt="Maria Edwards" class="w-8 h-8 rounded-full object-cover">
-                                        <div class="flex-1">
-                                            <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                                <h3 class="text-[13px] font-semibold text-[#050505] text-left">Michelle Turner</h3>
-                                                <p class="text-[13px] text-[#050505] text-left"> I just started using it, and I’m already so excited about what’s to come! 💗 </p>
-                                            </div>
-                                            <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Like
-                                                </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Reply
-                                                </button> <span class="text-[#65676B]">1h</span>
-                                                <div class="flex items-center gap-1">
-                                                    <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                            <path d="M7 10v12"></path>
-                                                            <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                                        </svg> </div> <span class="text-[#65676B]">15</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-2 mt-2"> <img src="assets/img/people/woman/woman13.jpg" alt="Vanessa Simmons" class="w-8 h-8 rounded-full object-cover">
-                                        <div class="flex-1">
-                                            <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                                <h3 class="text-[13px] font-semibold text-[#050505] text-left">Brittany Sullivan</h3>
-                                                <p class="text-[13px] text-[#050505] text-left"> This feels like a dream come true! 😅 </p>
-                                            </div>
-                                            <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Like
-                                                </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Reply
-                                                </button> <span class="text-[#65676B]">1h</span>
-                                                <div class="flex items-center gap-1">
-                                                    <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                            <path d="M7 10v12"></path>
-                                                            <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                                        </svg> </div> <span class="text-[#65676B]">15</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-2 mt-2"> <img src="assets/img/people/woman/woman14.jpg" alt="Sarah Johnson" class="w-8 h-8 rounded-full object-cover">
-                                        <div class="flex-1">
-                                            <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                                <h3 class="text-[13px] font-semibold text-[#050505] text-left">Samantha Reed</h3>
-                                                <p class="text-[13px] text-[#050505] text-left"> I’ve been using this for 15 days now, and you have no idea how much better I feel! My energy levels have never been this good. Thank you for sharing this amazing solution. </p>
-                                            </div>
-                                            <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Like
-                                                </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                                    Reply
-                                                </button> <span class="text-[#65676B]">1h</span>
-                                                <div class="flex items-center gap-1">
-                                                    <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                            <path d="M7 10v12"></path>
-                                                            <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                                        </svg> </div> <span class="text-[#65676B]">15</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex gap-2"> <img src="assets/img/people/woman/woman15.jpg" alt="Laura Mitchell" class="w-8 h-8 rounded-full object-cover">
-                            <div class="flex-1">
-                                <div class="bg-gray-100 rounded-2xl px-3 py-2">
-                                    <h3 class="text-[13px] font-semibold text-[#050505] text-left">Heather Barnes</h3>
-                                    <p class="text-[13px] text-[#050505] text-left"> This formula worked wonders. It completely changed my life and my energy levels! 😅 </p>
-                                </div>
-                                <div class="flex items-center gap-3 mt-0.5 text-xs"> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Like
-                                    </button> <button class="font-semibold text-[#65676B] hover:text-[#0866FF]">
-                                        Reply
-                                    </button> <span class="text-[#65676B]">1h</span>
-                                    <div class="flex items-center gap-1">
-                                        <div class="bg-[#0866FF] p-1 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-2.5 h-2.5 text-white">
-                                                <path d="M7 10v12"></path>
-                                                <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-                                            </svg> </div> <span class="text-[#65676B]">15</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div-->
-
     <div class="w-full max-w-4xl mt-9 mx-auto comentario" id="hero-comments">
         <section class="comentario py-8 m-4 bg-white border shadow rounded-2xl">
             <div class="max-w-4xl mx-auto px-4">
@@ -941,6 +673,69 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            /* ALTERE O VALOR 10 PARA OS SEGUNDOS EM QUE AS SEÇÕES VÃO APARECER */
+            var SECONDS_TO_DISPLAY = 10; // <--- MUDE AQUI: segundos após o início do vídeo
+            var CLASS_TO_DISPLAY = ".esconder";
+            /* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
+            var EXPIRATION_DAYS = 14;
+            var alreadyDisplayedKey = "alreadyElsDisplayed" + SECONDS_TO_DISPLAY;
+            var elsHidden = document.querySelectorAll(CLASS_TO_DISPLAY);
+            var elsDisplayed = false;
+            var attempts = 0;
+        
+            class StorageHandler {
+                static expiryTime = EXPIRATION_DAYS * 86400000;
+        
+                static set(key, value) {
+                    localStorage.setItem(
+                        key,
+                        JSON.stringify({ value, expiry: Date.now() + this.expiryTime })
+                    );
+                }
+        
+                static get(key) {
+                    var item = localStorage.getItem(key);
+                    if (!item) return null;
+        
+                    var { value, expiry } = JSON.parse(item);
+                    if (Date.now() > expiry) {
+                        localStorage.removeItem(key);
+                        return null;
+                    }
+                    return value;
+                }
+            }
+        
+            var alreadyElsDisplayed = StorageHandler.get(alreadyDisplayedKey);
+        
+            var showHiddenElements = function () {
+                elsDisplayed = true;
+                elsHidden.forEach((e) => e.style.display = "block");
+                StorageHandler.set(alreadyDisplayedKey, true);
+            };
+        
+            var startWatchVideoProgress = function () {
+                if (typeof smartplayer === 'undefined' || !(smartplayer.instances && smartplayer.instances.length)) {
+                    if (attempts >= 10) return;
+                    attempts++;
+                    return setTimeout(startWatchVideoProgress, 1000);
+                }
+                smartplayer.instances[0].on('timeupdate', () => {
+                    if (elsDisplayed || smartplayer.instances[0].smartAutoPlay) return;
+                    if (smartplayer.instances[0].video.currentTime < SECONDS_TO_DISPLAY) return;
+                    showHiddenElements();
+                });
+            };
+        
+            if (alreadyElsDisplayed) {
+                setTimeout(showHiddenElements, 100);
+            } else {
+                startWatchVideoProgress();
+            }
+        });
+        </script>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>

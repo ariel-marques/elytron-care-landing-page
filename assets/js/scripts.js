@@ -244,9 +244,3 @@ window.addEventListener('message', function(event) {
   }
 });
 
-// Função para mostrar os cards de oferta
-function showOfferCards() {
-  console.log('Mensagem recebida do VTurb! Mostrando offer cards...');
-  document.getElementById('offer-cards').classList.remove('hidden');
-  document.getElementById('offer-cards').scrollIntoView({ behavior: 'smooth' });
-}
