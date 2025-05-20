@@ -39,9 +39,9 @@
     <link rel="stylesheet" href="assets/css/style.css?vs20250513" />
     <style>
         .esconder {
-          display: none;
+            display: none;
         }
-      </style>
+    </style>
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -119,10 +119,10 @@
     </section>
 
     <!-- OFFER CARDS -->
-    <section id="offer-cards" class="cta-boxes esconder">
+    <section id="offer-cards" class="cta-boxes">
 
         <!-- 6 bottles -->
-        <div class="cta-box pack6 new6pack bg-green-100" style="cursor: pointer;">
+        <div class="cta-box pack6 new6pack bg-green-100 esconder" style="cursor: pointer;">
             <div class="bottle-title text-center bg-green-600">
                 <h3>6 Bottles<br>Elytron InsuCare</h3>
                 <p>44% OFF <strong class="ml-1 pl-2 pr-3 py-2 font-bold hi text-white-600 rounded-full inline-block text-thick"> Save <span class="inline md:hidden lg:inline">$240</span> - Best Value!</strong></p>
@@ -159,7 +159,7 @@
         </div>
 
         <!-- 3 bottles -->
-        <div class="cta-box pack2 new1pack" style="cursor: pointer;">
+        <div class="cta-box pack2 new1pack esconder" style="cursor: pointer;">
             <div class="bottle-title text-center bg-green-800">
                 <h3>3 Bottles<br>Elytron InsuCare</h3>
                 <p>22% OFF</p>
@@ -195,7 +195,7 @@
         </div>
 
         <!-- 1 bottles -->
-        <div class="cta-box pack3 new3pack" style="cursor: pointer;">
+        <div class="cta-box pack3 new3pack esconder" style="cursor: pointer;">
             <div class="bottle-title text-center bg-green-800">
                 <h3>1 Bottle<br>Elytron InsuCare</h3>
             </div>
@@ -676,7 +676,7 @@
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
             /* ALTERE O VALOR 10 PARA OS SEGUNDOS EM QUE AS SEÇÕES VÃO APARECER */
-            var SECONDS_TO_DISPLAY = 10; // <--- MUDE AQUI: segundos após o início do vídeo
+            var SECONDS_TO_DISPLAY = 10*2; // <--- MUDE AQUI: segundos após o início do vídeo
             var CLASS_TO_DISPLAY = ".esconder";
             /* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
             var EXPIRATION_DAYS = 14;
@@ -684,21 +684,21 @@
             var elsHidden = document.querySelectorAll(CLASS_TO_DISPLAY);
             var elsDisplayed = false;
             var attempts = 0;
-        
+
             class StorageHandler {
                 static expiryTime = EXPIRATION_DAYS * 86400000;
-        
+
                 static set(key, value) {
                     localStorage.setItem(
                         key,
                         JSON.stringify({ value, expiry: Date.now() + this.expiryTime })
                     );
                 }
-        
+
                 static get(key) {
                     var item = localStorage.getItem(key);
                     if (!item) return null;
-        
+
                     var { value, expiry } = JSON.parse(item);
                     if (Date.now() > expiry) {
                         localStorage.removeItem(key);
@@ -707,15 +707,15 @@
                     return value;
                 }
             }
-        
+
             var alreadyElsDisplayed = StorageHandler.get(alreadyDisplayedKey);
-        
+
             var showHiddenElements = function () {
                 elsDisplayed = true;
                 elsHidden.forEach((e) => e.style.display = "block");
                 StorageHandler.set(alreadyDisplayedKey, true);
             };
-        
+
             var startWatchVideoProgress = function () {
                 if (typeof smartplayer === 'undefined' || !(smartplayer.instances && smartplayer.instances.length)) {
                     if (attempts >= 10) return;
@@ -728,14 +728,14 @@
                     showHiddenElements();
                 });
             };
-        
+
             if (alreadyElsDisplayed) {
                 setTimeout(showHiddenElements, 100);
             } else {
                 startWatchVideoProgress();
             }
         });
-        </script>
+    </script>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>

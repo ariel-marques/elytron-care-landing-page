@@ -234,5 +234,3 @@ document.addEventListener('DOMContentLoaded', function() {
 // player.on('complete', () => {
 //    showBonusPopup();
 // });
-
-
