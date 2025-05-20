@@ -13,25 +13,6 @@ const minStock = 18;
 const stockEl = document.getElementById('stock');
 stockEl.textContent = stock;
 
-// FAKE COUNTDOWN (MINUTES:SECONDS)
-let countdown = 9 * 60 + 59; // 9 minutes and 59 seconds
-
-const minutesSpan = document.getElementById('minutes');
-const secondsSpan = document.getElementById('seconds');
-
-function updateTimer() {
-  const min = String(Math.floor(countdown / 60)).padStart(2, '0');
-  const sec = String(countdown % 60).padStart(2, '0');
-
-  minutesSpan.textContent = min;
-  secondsSpan.textContent = sec;
-
-  if (countdown > 0) countdown--;
-}
-
-setInterval(updateTimer, 1000);
-updateTimer();
-
 
 // FAKE COUNTDOWN STOCK
 document.addEventListener('DOMContentLoaded', () => {
@@ -99,36 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// TRIGGER OFFER AFTER A SET TIMEOUT
-function showOfferCTA() {
-  document.getElementById('offer').classList.remove('hidden');
-  document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
-}
 
-window.addEventListener('DOMContentLoaded', function() {
-  var checkPlayer = setInterval(function() {
-    if (window.player && typeof player.on === "function") {
-      // Adiciona o evento cuepoint para 40min54seg (2454 segundos)
-      player.on('cuepoint', function(event) {
-        if (event.detail.seconds === 2454) {
-          showOfferCTA();
-        }
-      });
-      clearInterval(checkPlayer);
-    }
-  }, 500);
-});
 
-// Aguarda player carregar e seta evento
-window.addEventListener('DOMContentLoaded', function() {
-  var checkPlayer = setInterval(function() {
-    // player.js cria um objeto global chamado 'player'
-    if (window.player && typeof player.on === "function") {
-      player.on('cta', showOfferCTA); // ou 'complete'
-      clearInterval(checkPlayer);
-    }
-  }, 500);
-});
+
 
 // HEADLINES ROTATIVAS DO TIMER
 const offerPhrases = [
@@ -195,7 +149,7 @@ document.getElementById('close-exit-popup').addEventListener('click', function (
   document.getElementById('exit-popup').classList.add('hidden');
 });
 
-// FUNÇÃO PARA ABRIR O POPUP DE BÔNUS VTURB
+// FUNÇÃO PARA ABRIR O POPUP DE BÔNUS
 function showBonusPopup() {
   const bonusPopup = document.getElementById('bonus-popup');
   if (bonusPopup) {
@@ -217,20 +171,117 @@ document.addEventListener('DOMContentLoaded', function() {
   if (closeBtn) {
     closeBtn.addEventListener('click', closeBonusPopup);
   }
-
-  // Escuta o evento do player para exibir o bônus ao final do vídeo
-  var checkPlayer = setInterval(function() {
-    if (window.player && typeof player.on === "function") {
-      player.on('complete', showBonusPopup);
-      clearInterval(checkPlayer);
-    }
-  }, 500);
 });
 
-// --- INTEGRAÇÃO REAL VTURB ---
-// (para depois quando o vídeo for assistido até o final)
 
-// Exemplo para usar com API do VTurb:
-// player.on('complete', () => {
-//    showBonusPopup();
-// });
+// FAKE COUNTDOWN (MINUTES:SECONDS)
+let timerInterval = null; // controla 1 timer rodando por vez
+let countdown = 9 * 60 + 59; // valor inicial, ajusta como quiser
+
+const minutesSpan = document.getElementById('minutes');
+const secondsSpan = document.getElementById('seconds');
+
+function updateTimer() {
+  const min = String(Math.floor(countdown / 60)).padStart(2, '0');
+  const sec = String(countdown % 60).padStart(2, '0');
+
+  minutesSpan.textContent = min;
+  secondsSpan.textContent = sec;
+
+  if (countdown > 0) {
+    countdown--;
+  } else {
+    clearInterval(timerInterval);
+    timerInterval = null; // permite iniciar de novo, se quiser
+  }
+}
+
+function startCountdown(duration) {
+  if (timerInterval) clearInterval(timerInterval); // SEMPRE limpa antes!
+  countdown = duration;
+  updateTimer();
+  timerInterval = setInterval(updateTimer, 1000);
+}
+
+function showOfferCTA() {
+  const offer = document.getElementById('offer');
+  offer.classList.remove('hidden');
+  offer.scrollIntoView({ behavior: 'smooth' });
+
+  // Inicia o countdown sempre que a oferta aparece
+  startCountdown(9 * 60 + 59); // ou outro valor desejado!
+}
+
+// VSL TRIGGER
+document.addEventListener("DOMContentLoaded", function() {
+  // TRIGGERS: segundos, seletor do elemento, e função a rodar ao aparecer (se houver)
+  var triggers = [
+    { seconds: 2310, className: ".esconder", callback: null },
+    { seconds: 3054, className: "#bonus-popup", callback: showBonusPopup },
+    { seconds: 2400, className: "#offer", callback: showOfferCTA }
+  ];
+
+  var EXPIRATION_DAYS = 14;
+
+  class StorageHandler {
+    static expiryTime = EXPIRATION_DAYS * 86400000;
+
+    static set(key, value) {
+      localStorage.setItem(
+        key,
+        JSON.stringify({ value, expiry: Date.now() + this.expiryTime })
+      );
+    }
+
+    static get(key) {
+      var item = localStorage.getItem(key);
+      if (!item) return null;
+      var { value, expiry } = JSON.parse(item);
+      if (Date.now() > expiry) {
+        localStorage.removeItem(key);
+        return null;
+      }
+      return value;
+    }
+  }
+
+  triggers.forEach(function(trigger) {
+    var alreadyDisplayedKey = "alreadyElsDisplayed_" + trigger.seconds + "_" + trigger.className;
+    var elsHidden = document.querySelectorAll(trigger.className);
+    var elsDisplayed = StorageHandler.get(alreadyDisplayedKey);
+
+    var showHiddenElements = function () {
+      elsHidden.forEach((e) => {
+        e.style.display = "block";
+        e.classList.remove("esconder");
+      });
+      StorageHandler.set(alreadyDisplayedKey, true);
+
+      // Chama a função de callback, se definida
+      if (typeof trigger.callback === "function") {
+        trigger.callback();
+      }
+    };
+
+    var attempts = 0;
+    var startWatchVideoProgress = function () {
+      if (typeof smartplayer === 'undefined' || !(smartplayer.instances && smartplayer.instances.length)) {
+        if (attempts >= 10) return;
+        attempts++;
+        return setTimeout(startWatchVideoProgress, 1000);
+      }
+      smartplayer.instances[0].on('timeupdate', () => {
+        if (elsDisplayed || smartplayer.instances[0].smartAutoPlay) return;
+        if (smartplayer.instances[0].video.currentTime < trigger.seconds) return;
+        showHiddenElements();
+        elsDisplayed = true;
+      });
+    };
+
+    if (elsDisplayed) {
+      setTimeout(showHiddenElements, 100);
+    } else {
+      startWatchVideoProgress();
+    }
+  });
+});
