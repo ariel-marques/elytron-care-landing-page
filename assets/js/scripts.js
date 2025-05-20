@@ -235,12 +235,4 @@ document.addEventListener('DOMContentLoaded', function() {
 //    showBonusPopup();
 // });
 
-// VTURB VSL 1
-// Listener para mensagens do iframe VTurb
-window.addEventListener('message', function(event) {
-  // Se quiser, pode checar event.origin aqui por segurança
-  if (event.data && event.data.type === 'show-offer-cards') {
-    showOfferCards();
-  }
-});
 
