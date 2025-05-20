@@ -235,3 +235,17 @@ document.addEventListener('DOMContentLoaded', function() {
 //    showBonusPopup();
 // });
 
+// VTURB VSL 1
+// Função para mostrar a section de ofertas
+function showOfferCards() {
+  document.getElementById('offer-cards').classList.remove('hidden');
+  // Se quiser rolar para o elemento automaticamente:
+  document.getElementById('offer-cards').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Ouve a mensagem do VTurb para liberar as ofertas
+window.addEventListener("message", function(event) {
+  if (event.data && event.data.type === 'show-offer-cards') {
+    showOfferCards();
+  }
+});
