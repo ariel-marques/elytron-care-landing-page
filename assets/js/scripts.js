@@ -236,16 +236,17 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 
 // VTURB VSL 1
-// Função para mostrar a section de ofertas
-function showOfferCards() {
-  document.getElementById('offer-cards').classList.remove('hidden');
-  // Se quiser rolar para o elemento automaticamente:
-  document.getElementById('offer-cards').scrollIntoView({ behavior: 'smooth' });
-}
-
-// Ouve a mensagem do VTurb para liberar as ofertas
-window.addEventListener("message", function(event) {
+// Listener para mensagens do iframe VTurb
+window.addEventListener('message', function(event) {
+  // Se quiser, pode checar event.origin aqui por segurança
   if (event.data && event.data.type === 'show-offer-cards') {
     showOfferCards();
   }
 });
+
+// Função para mostrar os cards de oferta
+function showOfferCards() {
+  console.log('Mensagem recebida do VTurb! Mostrando offer cards...');
+  document.getElementById('offer-cards').classList.remove('hidden');
+  document.getElementById('offer-cards').scrollIntoView({ behavior: 'smooth' });
+}
