@@ -8,8 +8,8 @@ setInterval(() => {
 }, 3000);
 viewersEl.textContent = viewers;
 
-let stock = 1500;
-const minStock = 18;
+let stock = 90;
+const minStock = 7;
 const stockEl = document.getElementById('stock');
 stockEl.textContent = stock;
 
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  let stock = 1500;
-  const minStock = 18;
+  let stock = 90;
+  const minStock = 7;
   stockEl.textContent = stock;
 
   function updateVisualStock(value) {
