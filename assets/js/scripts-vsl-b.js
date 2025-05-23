@@ -3,7 +3,7 @@
       var triggers = [
         { seconds: 2280, className: ".esconder", callback: null },
         { seconds: 3016, className: "#bonus-popup", callback: showBonusPopup },
-        { seconds: 2417, className: "#offer", callback: showOfferCTA }
+        { seconds: 1, className: "#offer", callback: showOfferCTA }
       ];
       var EXPIRATION_DAYS = 14;
 

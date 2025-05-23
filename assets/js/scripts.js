@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // FAKE COUNTDOWN (MINUTES:SECONDS)
 let timerInterval = null; // controla 1 timer rodando por vez
-let countdown = 60 * 60 + 59; // valor inicial, ajusta como quiser
+let countdown = 58 * 60 + 59; // valor inicial, ajusta como quiser
 
 const minutesSpan = document.getElementById('minutes');
 const secondsSpan = document.getElementById('seconds');
@@ -209,5 +209,5 @@ function showOfferCTA() {
   offer.scrollIntoView({ behavior: 'smooth' });
 
   // Inicia o countdown sempre que a oferta aparece
-  startCountdown(60 * 60 + 59); // ou outro valor desejado!
+  startCountdown(58 * 60 + 59); // ou outro valor desejado!
 }
