@@ -1,5 +1,4 @@
-
-// FAKE VIEWERS
+// FAKE VIEWERS (NÃO MUDA)
 let viewers = Math.floor(1553 + Math.random() * 50);
 const viewersEl = document.getElementById('viewers');
 setInterval(() => {
@@ -8,77 +7,73 @@ setInterval(() => {
 }, 3000);
 viewersEl.textContent = viewers;
 
+// FAKE STOCK (SÓ COMEÇA QUANDO CHAMAR A FUNÇÃO)
 let stock = 90;
 const minStock = 7;
 const stockEl = document.getElementById('stock');
 stockEl.textContent = stock;
 
-
-// FAKE COUNTDOWN STOCK
-document.addEventListener('DOMContentLoaded', () => {
-  const stockEl = document.getElementById('stock');
-  if (!stockEl) {
-    console.warn('Elemento #stock não encontrado!');
-    return;
-  }
-
-  let stock = 90;
-  const minStock = 7;
+// Função para manipular o estoque
+function updateVisualStock(value) {
+  stock = value;
   stockEl.textContent = stock;
+}
 
-  function updateVisualStock(value) {
-    stock = value;
-    stockEl.textContent = stock;
-  }
+// Burst rápido para criar senso de urgência (opcional)
+function burstDrop(amount, speed, callback) {
+  let target = stock - amount;
+  if (target < minStock) target = minStock;
 
-  function burstDrop(amount, speed, callback) {
-    let target = stock - amount;
-    if (target < minStock) target = minStock;
+  const interval = setInterval(() => {
+    if (stock > target) {
+      updateVisualStock(stock - 1);
+    } else {
+      clearInterval(interval);
+      if (callback) callback();
+    }
+  }, speed);
+}
 
-    const interval = setInterval(() => {
-      if (stock > target) {
-        updateVisualStock(stock - 1);
-      } else {
-        clearInterval(interval);
-        if (callback) callback();
-      }
-    }, speed);
-  }
+// Contagem controlada (descendo devagar)
+function startControlledCountdown() {
+  setInterval(() => {
+    if (stock <= minStock) return;
 
-  function startControlledCountdown() {
-    setInterval(() => {
-      if (stock <= minStock) return;
+    const chance = Math.random();
+    let reduction = 0;
 
-      const chance = Math.random();
-      let reduction = 0;
+    if (chance < 0.2) {
+      reduction = 1;
+    } else if (chance < 0.3) {
+      reduction = 2;
+    }
 
-      if (chance < 0.2) {
-        reduction = 1;
-      } else if (chance < 0.3) {
-        reduction = 3;
-      }
+    if (reduction && stock - reduction >= minStock) {
+      updateVisualStock(stock - reduction);
+    }
+  }, 4000);
+}
 
-      if (reduction && stock - reduction >= minStock) {
-        updateVisualStock(stock - reduction);
-      }
-    }, 4000);
-  }
+// Bursts ocasionais
+function scheduleRandomBursts() {
+  setInterval(() => {
+    const chance = Math.random();
+    if (stock > minStock + 10 && chance < 0.5) {
+      burstDrop(6, 100);
+    }
+  }, 35000);
+}
 
-  function scheduleRandomBursts() {
-    setInterval(() => {
-      const chance = Math.random();
-      if (stock > minStock + 10 && chance < 0.5) {
-        burstDrop(10, 100);
-      }
-    }, 35000); 
-  }
+// Função para iniciar o countdown do estoque (chame ela quando mostrar os cards)
+function startStockCountdown() {
+  if (window.stockStarted) return; // impede de rodar mais de uma vez
+  window.stockStarted = true;
 
-  // Início da contagem
-  burstDrop(11, 100, () => {
+  burstDrop(5, 120, () => {
     startControlledCountdown();
     scheduleRandomBursts();
   });
-});
+}
 
 
 
@@ -99,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     headline.textContent = offerPhrases[random];
   }
 
-  // TIMER DE 1h49min
+  
   const deadline = new Date(Date.now() + 1 * 60 * 60 * 1000 + 49 * 60 * 1000); // 1h49min
   const hoursEl = document.getElementById('hours');
   const minutesEl = document.getElementById('minutes');

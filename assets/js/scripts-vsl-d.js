@@ -1,7 +1,7 @@
     // --- TRIGGERS VSL B ---
     document.addEventListener("DOMContentLoaded", function() {
       var triggers = [
-        { seconds: 2350, className: ".esconder", callback: null },
+        { seconds: 2350, className: ".esconder", callback: startStockCountdown },
         { seconds: 3122, className: "#bonus-popup", callback: showBonusPopup },
         { seconds: 1, className: "#offer", callback: showOfferCTA }
       ];

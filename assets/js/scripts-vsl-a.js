@@ -1,8 +1,8 @@
     // --- TRIGGERS VSL A ---
     document.addEventListener("DOMContentLoaded", function() {
       var triggers = [
-        { seconds: 5, className: ".esconder", callback: null },
-        { seconds: 1800, className: "#bonus-popup", callback: showBonusPopup },
+        { seconds: 1200, className: ".esconder", callback: startStockCountdown  }, //1200
+        { seconds: 1800, className: "#bonus-popup", callback: showBonusPopup }, //1800
         { seconds: 1, className: "#offer", callback: showOfferCTA }
       ];
       var EXPIRATION_DAYS = 14;
