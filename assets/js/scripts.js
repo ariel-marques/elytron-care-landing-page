@@ -209,5 +209,5 @@ function showOfferCTA() {
   offer.scrollIntoView({ behavior: 'smooth' });
 
   // Inicia o countdown sempre que a oferta aparece
-  startCountdown(9 * 60 + 59); // ou outro valor desejado!
+  startCountdown(60 * 60 + 59); // ou outro valor desejado!
 }
