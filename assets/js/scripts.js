@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // FAKE COUNTDOWN (MINUTES:SECONDS)
 let timerInterval = null; // controla 1 timer rodando por vez
-let countdown = 9 * 60 + 59; // valor inicial, ajusta como quiser
+let countdown = 60 * 60 + 59; // valor inicial, ajusta como quiser
 
 const minutesSpan = document.getElementById('minutes');
 const secondsSpan = document.getElementById('seconds');
