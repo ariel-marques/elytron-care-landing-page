@@ -78,7 +78,6 @@ function startStockCountdown() {
 
 
 
-
 // HEADLINES ROTATIVAS DO TIMER
 const offerPhrases = [
   "Hurry! This Special Offer Expires In:",
@@ -135,6 +134,7 @@ function showExitPopup() {
 }
 
 document.addEventListener('mouseout', function (e) {
+  return;
   if (e.clientY < 10) {
     showExitPopup();
   }
