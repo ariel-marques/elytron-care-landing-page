@@ -2,7 +2,7 @@
     document.addEventListener("DOMContentLoaded", function() {
       var triggers = [
         { seconds: 2310, className: ".esconder", callback: startStockCountdown  },
-        // { seconds: 3050, className: "#bonus-popup", callback: showBonusPopup },
+        { seconds: 3050, className: "#bonus-popup", callback: showBonusPopup },
         { seconds: 1, className: "#offer", callback: showOfferCTA }
       ];
       var EXPIRATION_DAYS = 14;

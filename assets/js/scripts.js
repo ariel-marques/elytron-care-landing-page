@@ -78,6 +78,7 @@ function startStockCountdown() {
 
 
 
+
 // HEADLINES ROTATIVAS DO TIMER
 const offerPhrases = [
   "Hurry! This Special Offer Expires In:",
